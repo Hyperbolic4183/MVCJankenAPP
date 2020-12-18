@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		47368902258BD0A300131AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47368901258BD0A300131AF5 /* AppDelegate.swift */; };
 		47368904258BD0A300131AF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47368903258BD0A300131AF5 /* SceneDelegate.swift */; };
 		47368906258BD0A300131AF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47368905258BD0A300131AF5 /* ViewController.swift */; };
-		47368909258BD0A300131AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47368907258BD0A300131AF5 /* Main.storyboard */; };
 		4736890B258BD0A500131AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4736890A258BD0A500131AF5 /* Assets.xcassets */; };
 		4736890E258BD0A500131AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4736890C258BD0A500131AF5 /* LaunchScreen.storyboard */; };
+		4736891D258C27FE00131AF5 /* JankenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736891C258C27FD00131AF5 /* JankenView.swift */; };
+		47368920258C2ACD00131AF5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736891F258C2ACD00131AF5 /* Extension.swift */; };
+		47368923258C309D00131AF5 /* JankenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47368922258C309D00131AF5 /* JankenViewController.swift */; };
+		47368928258C43A900131AF5 /* JankenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47368927258C43A900131AF5 /* JankenModel.swift */; };
+		9CA223C024EE22F03695227F /* Pods_MVCJankenApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF59497C24B09FE40947DA2A /* Pods_MVCJankenApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,16 @@
 		47368901258BD0A300131AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47368903258BD0A300131AF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47368905258BD0A300131AF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47368908258BD0A300131AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4736890A258BD0A500131AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4736890D258BD0A500131AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4736890F258BD0A500131AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4736891C258C27FD00131AF5 /* JankenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JankenView.swift; sourceTree = "<group>"; };
+		4736891F258C2ACD00131AF5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		47368922258C309D00131AF5 /* JankenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JankenViewController.swift; sourceTree = "<group>"; };
+		47368927258C43A900131AF5 /* JankenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JankenModel.swift; sourceTree = "<group>"; };
+		74E25C9BFF12F3CCDEDEBC69 /* Pods-MVCJankenApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCJankenApp.release.xcconfig"; path = "Target Support Files/Pods-MVCJankenApp/Pods-MVCJankenApp.release.xcconfig"; sourceTree = "<group>"; };
+		90FFF35515777BD80AE6DCF7 /* Pods-MVCJankenApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCJankenApp.debug.xcconfig"; path = "Target Support Files/Pods-MVCJankenApp/Pods-MVCJankenApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EF59497C24B09FE40947DA2A /* Pods_MVCJankenApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVCJankenApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA223C024EE22F03695227F /* Pods_MVCJankenApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20F1CFE37883140E88553438 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90FFF35515777BD80AE6DCF7 /* Pods-MVCJankenApp.debug.xcconfig */,
+				74E25C9BFF12F3CCDEDEBC69 /* Pods-MVCJankenApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		473688F5258BD0A300131AF5 = {
 			isa = PBXGroup;
 			children = (
 				47368900258BD0A300131AF5 /* MVCJankenApp */,
 				473688FF258BD0A300131AF5 /* Products */,
+				20F1CFE37883140E88553438 /* Pods */,
+				97F8097ABE7A3E93713DFB42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,50 @@
 		47368900258BD0A300131AF5 /* MVCJankenApp */ = {
 			isa = PBXGroup;
 			children = (
+				47368918258BD13800131AF5 /* Model */,
+				47368917258BD13200131AF5 /* View */,
+				47368916258BD12900131AF5 /* Controller */,
 				47368901258BD0A300131AF5 /* AppDelegate.swift */,
 				47368903258BD0A300131AF5 /* SceneDelegate.swift */,
 				47368905258BD0A300131AF5 /* ViewController.swift */,
-				47368907258BD0A300131AF5 /* Main.storyboard */,
 				4736890A258BD0A500131AF5 /* Assets.xcassets */,
 				4736890C258BD0A500131AF5 /* LaunchScreen.storyboard */,
 				4736890F258BD0A500131AF5 /* Info.plist */,
+				4736891F258C2ACD00131AF5 /* Extension.swift */,
 			);
 			path = MVCJankenApp;
+			sourceTree = "<group>";
+		};
+		47368916258BD12900131AF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47368922258C309D00131AF5 /* JankenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47368917258BD13200131AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4736891C258C27FD00131AF5 /* JankenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47368918258BD13800131AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47368927258C43A900131AF5 /* JankenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97F8097ABE7A3E93713DFB42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF59497C24B09FE40947DA2A /* Pods_MVCJankenApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47368912258BD0A500131AF5 /* Build configuration list for PBXNativeTarget "MVCJankenApp" */;
 			buildPhases = (
+				35092132C07319946D0ACC01 /* [CP] Check Pods Manifest.lock */,
 				473688FA258BD0A300131AF5 /* Sources */,
 				473688FB258BD0A300131AF5 /* Frameworks */,
 				473688FC258BD0A300131AF5 /* Resources */,
+				AD78823038913E8E6F5E7C49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +185,71 @@
 			files = (
 				4736890E258BD0A500131AF5 /* LaunchScreen.storyboard in Resources */,
 				4736890B258BD0A500131AF5 /* Assets.xcassets in Resources */,
-				47368909258BD0A300131AF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35092132C07319946D0ACC01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVCJankenApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD78823038913E8E6F5E7C49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVCJankenApp/Pods-MVCJankenApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVCJankenApp/Pods-MVCJankenApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVCJankenApp/Pods-MVCJankenApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		473688FA258BD0A300131AF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47368920258C2ACD00131AF5 /* Extension.swift in Sources */,
+				47368923258C309D00131AF5 /* JankenViewController.swift in Sources */,
 				47368906258BD0A300131AF5 /* ViewController.swift in Sources */,
+				4736891D258C27FE00131AF5 /* JankenView.swift in Sources */,
 				47368902258BD0A300131AF5 /* AppDelegate.swift in Sources */,
 				47368904258BD0A300131AF5 /* SceneDelegate.swift in Sources */,
+				47368928258C43A900131AF5 /* JankenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		47368907258BD0A300131AF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47368908258BD0A300131AF5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4736890C258BD0A500131AF5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +379,7 @@
 		};
 		47368913258BD0A500131AF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90FFF35515777BD80AE6DCF7 /* Pods-MVCJankenApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +399,7 @@
 		};
 		47368914258BD0A500131AF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E25C9BFF12F3CCDEDEBC69 /* Pods-MVCJankenApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
